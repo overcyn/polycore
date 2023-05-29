@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/SwipeCellKit"]
+	path = Carthage/Checkouts/SwipeCellKit
+	url = https://github.com/overcyn/SwipeCellKit.git

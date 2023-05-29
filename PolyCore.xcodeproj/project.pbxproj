@@ -33,6 +33,7 @@
 		67B6EBA92A2565140004E173 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBA82A2565140004E173 /* Action.swift */; };
 		67B6EBAB2A2566850004E173 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBAA2A2566850004E173 /* AlertAction.swift */; };
 		67B6EBAD2A2568440004E173 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBAC2A2568440004E173 /* CollectionExtensions.swift */; };
+		67B6EBB02A256DE90004E173 /* SwipeCellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B6EBAF2A256DE90004E173 /* SwipeCellKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		67B6EBA82A2565140004E173 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		67B6EBAA2A2566850004E173 /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		67B6EBAC2A2568440004E173 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
+		67B6EBAF2A256DE90004E173 /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B6EBB02A256DE90004E173 /* SwipeCellKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +103,7 @@
 				67B6EB592A25408A0004E173 /* PolyCore */,
 				67B6EB652A25408A0004E173 /* PolyCoreTests */,
 				67B6EB582A25408A0004E173 /* Products */,
+				67B6EBAE2A256DE90004E173 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +185,14 @@
 				67B6EBAA2A2566850004E173 /* AlertAction.swift */,
 			);
 			path = Actions;
+			sourceTree = "<group>";
+		};
+		67B6EBAE2A256DE90004E173 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67B6EBAF2A256DE90004E173 /* SwipeCellKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
