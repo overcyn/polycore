@@ -31,6 +31,8 @@
 		67B6EBA32A2550E60004E173 /* Tasks_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB9F2A2550E20004E173 /* Tasks_Tests.swift */; };
 		67B6EBA62A2551430004E173 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBA52A2551430004E173 /* Errors.swift */; };
 		67B6EBA92A2565140004E173 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBA82A2565140004E173 /* Action.swift */; };
+		67B6EBAB2A2566850004E173 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBAA2A2566850004E173 /* AlertAction.swift */; };
+		67B6EBAD2A2568440004E173 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBAC2A2568440004E173 /* CollectionExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		67B6EBA02A2550E20004E173 /* Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		67B6EBA52A2551430004E173 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		67B6EBA82A2565140004E173 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		67B6EBAA2A2566850004E173 /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		67B6EBAC2A2568440004E173 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				67B6EBA72A2556E30004E173 /* Actions */,
-				67B6EBA42A25512D0004E173 /* Utilities */,
 				67B6EB9E2A2550BE0004E173 /* Tasks */,
 				67B6EB7A2A2549B60004E173 /* LYPageLayout */,
+				67B6EBA42A25512D0004E173 /* Utilities */,
 				67B6EB5A2A25408A0004E173 /* PolyCore.h */,
 				67B6EB5B2A25408A0004E173 /* PolyCore.docc */,
 			);
@@ -165,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				67B6EBA52A2551430004E173 /* Errors.swift */,
+				67B6EBAC2A2568440004E173 /* CollectionExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				67B6EBA82A2565140004E173 /* Action.swift */,
+				67B6EBAA2A2566850004E173 /* AlertAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -301,6 +307,8 @@
 				67B6EB942A2549B60004E173 /* LYCollectionViewLayout.m in Sources */,
 				67B6EB8E2A2549B60004E173 /* LYPage.m in Sources */,
 				67B6EB9C2A2549B60004E173 /* LYCollectionViewBehavior.m in Sources */,
+				67B6EBAD2A2568440004E173 /* CollectionExtensions.swift in Sources */,
+				67B6EBAB2A2566850004E173 /* AlertAction.swift in Sources */,
 				67B6EB9B2A2549B60004E173 /* LYCollectionViewCustomBehavior.m in Sources */,
 				67B6EBA62A2551430004E173 /* Errors.swift in Sources */,
 				67B6EB8D2A2549B60004E173 /* LYPageViewController.m in Sources */,
