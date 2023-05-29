@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+public func TestPolyCore() -> Int {
+    return 12
+}
