@@ -27,6 +27,9 @@
 		67B6EB9A2A2549B60004E173 /* UIKit+LYAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B6EB892A2549B60004E173 /* UIKit+LYAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67B6EB9B2A2549B60004E173 /* LYCollectionViewCustomBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB8A2A2549B60004E173 /* LYCollectionViewCustomBehavior.m */; };
 		67B6EB9C2A2549B60004E173 /* LYCollectionViewBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB8B2A2549B60004E173 /* LYCollectionViewBehavior.m */; };
+		67B6EBA22A2550E20004E173 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBA02A2550E20004E173 /* Tasks.swift */; };
+		67B6EBA32A2550E60004E173 /* Tasks_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB9F2A2550E20004E173 /* Tasks_Tests.swift */; };
+		67B6EBA62A2551430004E173 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBA52A2551430004E173 /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		67B6EB892A2549B60004E173 /* UIKit+LYAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+LYAdditions.h"; sourceTree = "<group>"; };
 		67B6EB8A2A2549B60004E173 /* LYCollectionViewCustomBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCollectionViewCustomBehavior.m; sourceTree = "<group>"; };
 		67B6EB8B2A2549B60004E173 /* LYCollectionViewBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCollectionViewBehavior.m; sourceTree = "<group>"; };
+		67B6EB9F2A2550E20004E173 /* Tasks_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasks_Tests.swift; sourceTree = "<group>"; };
+		67B6EBA02A2550E20004E173 /* Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		67B6EBA52A2551430004E173 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,8 @@
 		67B6EB592A25408A0004E173 /* PolyCore */ = {
 			isa = PBXGroup;
 			children = (
+				67B6EBA42A25512D0004E173 /* Utilities */,
+				67B6EB9E2A2550BE0004E173 /* Tasks */,
 				67B6EB7A2A2549B60004E173 /* LYPageLayout */,
 				67B6EB5A2A25408A0004E173 /* PolyCore.h */,
 				67B6EB5B2A25408A0004E173 /* PolyCore.docc */,
@@ -139,6 +147,23 @@
 				67B6EB8B2A2549B60004E173 /* LYCollectionViewBehavior.m */,
 			);
 			path = LYPageLayout;
+			sourceTree = "<group>";
+		};
+		67B6EB9E2A2550BE0004E173 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				67B6EBA02A2550E20004E173 /* Tasks.swift */,
+				67B6EB9F2A2550E20004E173 /* Tasks_Tests.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		67B6EBA42A25512D0004E173 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				67B6EBA52A2551430004E173 /* Errors.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +290,9 @@
 				67B6EB8E2A2549B60004E173 /* LYPage.m in Sources */,
 				67B6EB9C2A2549B60004E173 /* LYCollectionViewBehavior.m in Sources */,
 				67B6EB9B2A2549B60004E173 /* LYCollectionViewCustomBehavior.m in Sources */,
+				67B6EBA62A2551430004E173 /* Errors.swift in Sources */,
 				67B6EB8D2A2549B60004E173 /* LYPageViewController.m in Sources */,
+				67B6EBA22A2550E20004E173 /* Tasks.swift in Sources */,
 				67B6EB912A2549B60004E173 /* UIKit+LYAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B6EBA32A2550E60004E173 /* Tasks_Tests.swift in Sources */,
 				67B6EB672A25408A0004E173 /* PolyCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
