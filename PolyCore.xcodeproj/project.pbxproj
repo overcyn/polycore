@@ -12,6 +12,22 @@
 		67B6EB672A25408A0004E173 /* PolyCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB662A25408A0004E173 /* PolyCoreTests.swift */; };
 		67B6EB682A25408A0004E173 /* PolyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B6EB5A2A25408A0004E173 /* PolyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67B6EB722A2540FB0004E173 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB712A2540FB0004E173 /* Test.swift */; };
+		67B6EB8C2A2549B60004E173 /* LYCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B6EB7B2A2549B60004E173 /* LYCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67B6EB8D2A2549B60004E173 /* LYPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB7C2A2549B60004E173 /* LYPageViewController.m */; };
+		67B6EB8E2A2549B60004E173 /* LYPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB7D2A2549B60004E173 /* LYPage.m */; };
+		67B6EB8F2A2549B60004E173 /* LYCollectionViewBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B6EB7E2A2549B60004E173 /* LYCollectionViewBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67B6EB902A2549B60004E173 /* LYCollectionViewCustomBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B6EB7F2A2549B60004E173 /* LYCollectionViewCustomBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67B6EB912A2549B60004E173 /* UIKit+LYAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB802A2549B60004E173 /* UIKit+LYAdditions.m */; };
+		67B6EB922A2549B60004E173 /* LYSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B6EB812A2549B60004E173 /* LYSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67B6EB932A2549B60004E173 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 67B6EB822A2549B60004E173 /* README.md */; };
+		67B6EB942A2549B60004E173 /* LYCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB832A2549B60004E173 /* LYCollectionViewLayout.m */; };
+		67B6EB952A2549B60004E173 /* LYPageLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B6EB842A2549B60004E173 /* LYPageLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67B6EB962A2549B60004E173 /* LYPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B6EB852A2549B60004E173 /* LYPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67B6EB972A2549B60004E173 /* LYPageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B6EB862A2549B60004E173 /* LYPageViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67B6EB982A2549B60004E173 /* LYCollectionViewCustomBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB872A2549B60004E173 /* LYCollectionViewCustomBehavior.swift */; };
+		67B6EB9A2A2549B60004E173 /* UIKit+LYAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B6EB892A2549B60004E173 /* UIKit+LYAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67B6EB9B2A2549B60004E173 /* LYCollectionViewCustomBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB8A2A2549B60004E173 /* LYCollectionViewCustomBehavior.m */; };
+		67B6EB9C2A2549B60004E173 /* LYCollectionViewBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB8B2A2549B60004E173 /* LYCollectionViewBehavior.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +47,22 @@
 		67B6EB612A25408A0004E173 /* PolyCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolyCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B6EB662A25408A0004E173 /* PolyCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyCoreTests.swift; sourceTree = "<group>"; };
 		67B6EB712A2540FB0004E173 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		67B6EB7B2A2549B60004E173 /* LYCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCollectionViewLayout.h; sourceTree = "<group>"; };
+		67B6EB7C2A2549B60004E173 /* LYPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPageViewController.m; sourceTree = "<group>"; };
+		67B6EB7D2A2549B60004E173 /* LYPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPage.m; sourceTree = "<group>"; };
+		67B6EB7E2A2549B60004E173 /* LYCollectionViewBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCollectionViewBehavior.h; sourceTree = "<group>"; };
+		67B6EB7F2A2549B60004E173 /* LYCollectionViewCustomBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCollectionViewCustomBehavior.h; sourceTree = "<group>"; };
+		67B6EB802A2549B60004E173 /* UIKit+LYAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIKit+LYAdditions.m"; sourceTree = "<group>"; };
+		67B6EB812A2549B60004E173 /* LYSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSection.h; sourceTree = "<group>"; };
+		67B6EB822A2549B60004E173 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		67B6EB832A2549B60004E173 /* LYCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCollectionViewLayout.m; sourceTree = "<group>"; };
+		67B6EB842A2549B60004E173 /* LYPageLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPageLayout.h; sourceTree = "<group>"; };
+		67B6EB852A2549B60004E173 /* LYPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPage.h; sourceTree = "<group>"; };
+		67B6EB862A2549B60004E173 /* LYPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPageViewController.h; sourceTree = "<group>"; };
+		67B6EB872A2549B60004E173 /* LYCollectionViewCustomBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCollectionViewCustomBehavior.swift; sourceTree = "<group>"; };
+		67B6EB892A2549B60004E173 /* UIKit+LYAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+LYAdditions.h"; sourceTree = "<group>"; };
+		67B6EB8A2A2549B60004E173 /* LYCollectionViewCustomBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCollectionViewCustomBehavior.m; sourceTree = "<group>"; };
+		67B6EB8B2A2549B60004E173 /* LYCollectionViewBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCollectionViewBehavior.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +105,7 @@
 		67B6EB592A25408A0004E173 /* PolyCore */ = {
 			isa = PBXGroup;
 			children = (
+				67B6EB7A2A2549B60004E173 /* LYPageLayout */,
 				67B6EB5A2A25408A0004E173 /* PolyCore.h */,
 				67B6EB5B2A25408A0004E173 /* PolyCore.docc */,
 				67B6EB712A2540FB0004E173 /* Test.swift */,
@@ -88,6 +121,29 @@
 			path = PolyCoreTests;
 			sourceTree = "<group>";
 		};
+		67B6EB7A2A2549B60004E173 /* LYPageLayout */ = {
+			isa = PBXGroup;
+			children = (
+				67B6EB7B2A2549B60004E173 /* LYCollectionViewLayout.h */,
+				67B6EB7C2A2549B60004E173 /* LYPageViewController.m */,
+				67B6EB7D2A2549B60004E173 /* LYPage.m */,
+				67B6EB7E2A2549B60004E173 /* LYCollectionViewBehavior.h */,
+				67B6EB7F2A2549B60004E173 /* LYCollectionViewCustomBehavior.h */,
+				67B6EB802A2549B60004E173 /* UIKit+LYAdditions.m */,
+				67B6EB812A2549B60004E173 /* LYSection.h */,
+				67B6EB822A2549B60004E173 /* README.md */,
+				67B6EB832A2549B60004E173 /* LYCollectionViewLayout.m */,
+				67B6EB842A2549B60004E173 /* LYPageLayout.h */,
+				67B6EB852A2549B60004E173 /* LYPage.h */,
+				67B6EB862A2549B60004E173 /* LYPageViewController.h */,
+				67B6EB872A2549B60004E173 /* LYCollectionViewCustomBehavior.swift */,
+				67B6EB892A2549B60004E173 /* UIKit+LYAdditions.h */,
+				67B6EB8A2A2549B60004E173 /* LYCollectionViewCustomBehavior.m */,
+				67B6EB8B2A2549B60004E173 /* LYCollectionViewBehavior.m */,
+			);
+			path = LYPageLayout;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -95,6 +151,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B6EB952A2549B60004E173 /* LYPageLayout.h in Headers */,
+				67B6EB962A2549B60004E173 /* LYPage.h in Headers */,
+				67B6EB922A2549B60004E173 /* LYSection.h in Headers */,
+				67B6EB8C2A2549B60004E173 /* LYCollectionViewLayout.h in Headers */,
+				67B6EB8F2A2549B60004E173 /* LYCollectionViewBehavior.h in Headers */,
+				67B6EB972A2549B60004E173 /* LYPageViewController.h in Headers */,
+				67B6EB902A2549B60004E173 /* LYCollectionViewCustomBehavior.h in Headers */,
+				67B6EB9A2A2549B60004E173 /* UIKit+LYAdditions.h in Headers */,
 				67B6EB682A25408A0004E173 /* PolyCore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B6EB932A2549B60004E173 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +262,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B6EB982A2549B60004E173 /* LYCollectionViewCustomBehavior.swift in Sources */,
 				67B6EB5C2A25408A0004E173 /* PolyCore.docc in Sources */,
+				67B6EB942A2549B60004E173 /* LYCollectionViewLayout.m in Sources */,
+				67B6EB8E2A2549B60004E173 /* LYPage.m in Sources */,
+				67B6EB9C2A2549B60004E173 /* LYCollectionViewBehavior.m in Sources */,
+				67B6EB9B2A2549B60004E173 /* LYCollectionViewCustomBehavior.m in Sources */,
+				67B6EB8D2A2549B60004E173 /* LYPageViewController.m in Sources */,
 				67B6EB722A2540FB0004E173 /* Test.swift in Sources */,
+				67B6EB912A2549B60004E173 /* UIKit+LYAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +428,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,6 +457,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

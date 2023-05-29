@@ -15,4 +15,11 @@ FOUNDATION_EXPORT const unsigned char PolyCoreVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <PolyCore/PublicHeader.h>
 
-
+#import "LYCollectionViewBehavior.h"
+#import "LYCollectionViewCustomBehavior.h"
+#import "LYCollectionViewLayout.h"
+#import "LYPage.h"
+#import "LYPageLayout.h"
+#import "LYPageViewController.h"
+#import "LYSection.h"
+#import "UIKit+LYAdditions.h"
