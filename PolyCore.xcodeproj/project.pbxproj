@@ -34,6 +34,12 @@
 		67B6EBAB2A2566850004E173 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBAA2A2566850004E173 /* AlertAction.swift */; };
 		67B6EBAD2A2568440004E173 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBAC2A2568440004E173 /* CollectionExtensions.swift */; };
 		67B6EBB02A256DE90004E173 /* SwipeCellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B6EBAF2A256DE90004E173 /* SwipeCellKit.framework */; };
+		67B6EBB32A256E770004E173 /* SectionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBB22A256E770004E173 /* SectionStyle.swift */; };
+		67B6EBB62A256ED90004E173 /* BasicSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBB42A256ED90004E173 /* BasicSection.swift */; };
+		67B6EBB72A256ED90004E173 /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBB52A256ED90004E173 /* BasicView.swift */; };
+		67B6EBB92A256F210004E173 /* ButtonSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBB82A256F210004E173 /* ButtonSection.swift */; };
+		67B6EBBB2A256FBE0004E173 /* ContextMenuAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBBA2A256FBE0004E173 /* ContextMenuAction.swift */; };
+		67B6EBBD2A256FE90004E173 /* PanMenuAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBBC2A256FE90004E173 /* PanMenuAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +81,12 @@
 		67B6EBAA2A2566850004E173 /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		67B6EBAC2A2568440004E173 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 		67B6EBAF2A256DE90004E173 /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B6EBB22A256E770004E173 /* SectionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionStyle.swift; sourceTree = "<group>"; };
+		67B6EBB42A256ED90004E173 /* BasicSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicSection.swift; sourceTree = "<group>"; };
+		67B6EBB52A256ED90004E173 /* BasicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
+		67B6EBB82A256F210004E173 /* ButtonSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSection.swift; sourceTree = "<group>"; };
+		67B6EBBA2A256FBE0004E173 /* ContextMenuAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextMenuAction.swift; sourceTree = "<group>"; };
+		67B6EBBC2A256FE90004E173 /* PanMenuAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanMenuAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +134,7 @@
 				67B6EBA72A2556E30004E173 /* Actions */,
 				67B6EB9E2A2550BE0004E173 /* Tasks */,
 				67B6EB7A2A2549B60004E173 /* LYPageLayout */,
+				67B6EBB12A256E390004E173 /* Sections */,
 				67B6EBA42A25512D0004E173 /* Utilities */,
 				67B6EB5A2A25408A0004E173 /* PolyCore.h */,
 				67B6EB5B2A25408A0004E173 /* PolyCore.docc */,
@@ -183,6 +196,8 @@
 			children = (
 				67B6EBA82A2565140004E173 /* Action.swift */,
 				67B6EBAA2A2566850004E173 /* AlertAction.swift */,
+				67B6EBBA2A256FBE0004E173 /* ContextMenuAction.swift */,
+				67B6EBBC2A256FE90004E173 /* PanMenuAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -193,6 +208,17 @@
 				67B6EBAF2A256DE90004E173 /* SwipeCellKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67B6EBB12A256E390004E173 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				67B6EBB82A256F210004E173 /* ButtonSection.swift */,
+				67B6EBB42A256ED90004E173 /* BasicSection.swift */,
+				67B6EBB52A256ED90004E173 /* BasicView.swift */,
+				67B6EBB22A256E770004E173 /* SectionStyle.swift */,
+			);
+			path = Sections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,12 +340,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				67B6EB982A2549B60004E173 /* LYCollectionViewCustomBehavior.swift in Sources */,
+				67B6EBB32A256E770004E173 /* SectionStyle.swift in Sources */,
 				67B6EBA92A2565140004E173 /* Action.swift in Sources */,
 				67B6EB5C2A25408A0004E173 /* PolyCore.docc in Sources */,
+				67B6EBB92A256F210004E173 /* ButtonSection.swift in Sources */,
 				67B6EB942A2549B60004E173 /* LYCollectionViewLayout.m in Sources */,
 				67B6EB8E2A2549B60004E173 /* LYPage.m in Sources */,
 				67B6EB9C2A2549B60004E173 /* LYCollectionViewBehavior.m in Sources */,
+				67B6EBB72A256ED90004E173 /* BasicView.swift in Sources */,
 				67B6EBAD2A2568440004E173 /* CollectionExtensions.swift in Sources */,
+				67B6EBBD2A256FE90004E173 /* PanMenuAction.swift in Sources */,
+				67B6EBBB2A256FBE0004E173 /* ContextMenuAction.swift in Sources */,
+				67B6EBB62A256ED90004E173 /* BasicSection.swift in Sources */,
 				67B6EBAB2A2566850004E173 /* AlertAction.swift in Sources */,
 				67B6EB9B2A2549B60004E173 /* LYCollectionViewCustomBehavior.m in Sources */,
 				67B6EBA62A2551430004E173 /* Errors.swift in Sources */,
