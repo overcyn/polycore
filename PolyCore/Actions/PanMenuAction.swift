@@ -74,7 +74,7 @@ class PanMenuPage: NSObject, LYPage {
         let output = LYPageOutput()
         var array: [LYSection] = []
         for i in panMenu.items {
-            let section = UI.panMenuSection(theme, enabled: i.enabled)
+            let section = BasicSection.panMenuSection(theme, enabled: i.enabled)
             section.titleText = i.title
             section.titleAttributedText = i.attributedTitle
             section.detailText = i.detail
@@ -103,7 +103,7 @@ class PanMenuPage: NSObject, LYPage {
                 })
             }
             array.append(section)
-            array.append(UI.panMenuSeparatorSection(theme))
+            array.append(SeparatorSection.panMenuSeparatorSection(theme))
         }
         array = UI.trimSeparators(array)
         output.sections = array
@@ -127,7 +127,7 @@ extension LYPageViewController: PanModalPresentable {
     }
 }
 
-extension UI {
+extension BasicSection {
     class func panMenuSection(_ theme: Theme, enabled: Bool, line: Int = #line) -> BasicSection {
         let section = UI.defaultSection()
         section.identifier = "\(#function):\(line)"
@@ -139,8 +139,10 @@ extension UI {
         }
         return section
     }
-    
-    class func panMenuSeparatorSection(_ theme: Theme, line: Int = #line) -> LYSection {
+}
+
+extension SeparatorSection {
+    class func panMenuSeparatorSection(_ theme: Theme, line: Int = #line) -> SeparatorSection {
         let section = SeparatorSection()
         section.identifier = "\(#function):\(line)"
         section.style.backgroundColor = UI.backgroundColor(theme)

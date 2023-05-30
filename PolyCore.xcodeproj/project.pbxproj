@@ -51,6 +51,17 @@
 		67B6EBD62A25A5590004E173 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBD52A25A5590004E173 /* UIColorExtensions.swift */; };
 		67B6EBD82A25A5BA0004E173 /* SpacerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBD72A25A5BA0004E173 /* SpacerSection.swift */; };
 		67B6EBDA2A25A7F60004E173 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBD92A25A7F60004E173 /* BundleExtensions.swift */; };
+		67B6EBDC2A25BE150004E173 /* LoadingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBDB2A25BE150004E173 /* LoadingSection.swift */; };
+		67B6EBDE2A25BE4B0004E173 /* ImageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBDD2A25BE4B0004E173 /* ImageSection.swift */; };
+		67B6EBE02A25BE730004E173 /* ButtonGroupSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBDF2A25BE730004E173 /* ButtonGroupSection.swift */; };
+		67B6EBE22A25BEA10004E173 /* SegmentedControlSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBE12A25BEA10004E173 /* SegmentedControlSection.swift */; };
+		67B6EBE42A25BEC80004E173 /* PickerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBE32A25BEC80004E173 /* PickerSection.swift */; };
+		67B6EBE82A25BEFE0004E173 /* SwitchSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBE52A25BEFE0004E173 /* SwitchSection.swift */; };
+		67B6EBE92A25BEFE0004E173 /* StepperSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBE62A25BEFE0004E173 /* StepperSection.swift */; };
+		67B6EBEA2A25BEFE0004E173 /* SliderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBE72A25BEFE0004E173 /* SliderSection.swift */; };
+		67B6EBED2A25BF620004E173 /* AppearanceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBEB2A25BF620004E173 /* AppearanceSection.swift */; };
+		67B6EBEE2A25BF620004E173 /* TitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBEC2A25BF620004E173 /* TitleSection.swift */; };
+		67B6EBF02A25BFE50004E173 /* ProButtonSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBEF2A25BFE50004E173 /* ProButtonSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +120,17 @@
 		67B6EBD52A25A5590004E173 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		67B6EBD72A25A5BA0004E173 /* SpacerSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacerSection.swift; sourceTree = "<group>"; };
 		67B6EBD92A25A7F60004E173 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		67B6EBDB2A25BE150004E173 /* LoadingSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingSection.swift; sourceTree = "<group>"; };
+		67B6EBDD2A25BE4B0004E173 /* ImageSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSection.swift; sourceTree = "<group>"; };
+		67B6EBDF2A25BE730004E173 /* ButtonGroupSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonGroupSection.swift; sourceTree = "<group>"; };
+		67B6EBE12A25BEA10004E173 /* SegmentedControlSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlSection.swift; sourceTree = "<group>"; };
+		67B6EBE32A25BEC80004E173 /* PickerSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerSection.swift; sourceTree = "<group>"; };
+		67B6EBE52A25BEFE0004E173 /* SwitchSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchSection.swift; sourceTree = "<group>"; };
+		67B6EBE62A25BEFE0004E173 /* StepperSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperSection.swift; sourceTree = "<group>"; };
+		67B6EBE72A25BEFE0004E173 /* SliderSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderSection.swift; sourceTree = "<group>"; };
+		67B6EBEB2A25BF620004E173 /* AppearanceSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceSection.swift; sourceTree = "<group>"; };
+		67B6EBEC2A25BF620004E173 /* TitleSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleSection.swift; sourceTree = "<group>"; };
+		67B6EBEF2A25BFE50004E173 /* ProButtonSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProButtonSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +262,17 @@
 		67B6EBB12A256E390004E173 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				67B6EBEF2A25BFE50004E173 /* ProButtonSection.swift */,
+				67B6EBEB2A25BF620004E173 /* AppearanceSection.swift */,
+				67B6EBEC2A25BF620004E173 /* TitleSection.swift */,
+				67B6EBE72A25BEFE0004E173 /* SliderSection.swift */,
+				67B6EBE62A25BEFE0004E173 /* StepperSection.swift */,
+				67B6EBE52A25BEFE0004E173 /* SwitchSection.swift */,
+				67B6EBE32A25BEC80004E173 /* PickerSection.swift */,
+				67B6EBE12A25BEA10004E173 /* SegmentedControlSection.swift */,
+				67B6EBDF2A25BE730004E173 /* ButtonGroupSection.swift */,
+				67B6EBDD2A25BE4B0004E173 /* ImageSection.swift */,
+				67B6EBDB2A25BE150004E173 /* LoadingSection.swift */,
 				67B6EBD72A25A5BA0004E173 /* SpacerSection.swift */,
 				67B6EBBF2A25A01F0004E173 /* SeparatorSection.swift */,
 				67B6EBB82A256F210004E173 /* ButtonSection.swift */,
@@ -381,6 +414,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B6EBDC2A25BE150004E173 /* LoadingSection.swift in Sources */,
+				67B6EBE82A25BEFE0004E173 /* SwitchSection.swift in Sources */,
 				67B6EBD62A25A5590004E173 /* UIColorExtensions.swift in Sources */,
 				67B6EBD82A25A5BA0004E173 /* SpacerSection.swift in Sources */,
 				67B6EB982A2549B60004E173 /* LYCollectionViewCustomBehavior.swift in Sources */,
@@ -388,16 +423,25 @@
 				67B6EBA92A2565140004E173 /* Action.swift in Sources */,
 				67B6EB5C2A25408A0004E173 /* PolyCore.docc in Sources */,
 				67B6EBDA2A25A7F60004E173 /* BundleExtensions.swift in Sources */,
+				67B6EBED2A25BF620004E173 /* AppearanceSection.swift in Sources */,
 				67B6EBB92A256F210004E173 /* ButtonSection.swift in Sources */,
+				67B6EBEA2A25BEFE0004E173 /* SliderSection.swift in Sources */,
+				67B6EBEE2A25BF620004E173 /* TitleSection.swift in Sources */,
 				67B6EBD42A25A4EF0004E173 /* UIImageExtensions.swift in Sources */,
 				67B6EB942A2549B60004E173 /* LYCollectionViewLayout.m in Sources */,
 				67B6EBD02A25A3FF0004E173 /* Colors.swift in Sources */,
+				67B6EBE22A25BEA10004E173 /* SegmentedControlSection.swift in Sources */,
 				67B6EBC62A25A1420004E173 /* Theme.swift in Sources */,
+				67B6EBE92A25BEFE0004E173 /* StepperSection.swift in Sources */,
+				67B6EBDE2A25BE4B0004E173 /* ImageSection.swift in Sources */,
+				67B6EBE42A25BEC80004E173 /* PickerSection.swift in Sources */,
 				67B6EBCA2A25A3550004E173 /* UI.swift in Sources */,
 				67B6EB8E2A2549B60004E173 /* LYPage.m in Sources */,
 				67B6EB9C2A2549B60004E173 /* LYCollectionViewBehavior.m in Sources */,
+				67B6EBE02A25BE730004E173 /* ButtonGroupSection.swift in Sources */,
 				67B6EBB72A256ED90004E173 /* BasicView.swift in Sources */,
 				67B6EBAD2A2568440004E173 /* CollectionExtensions.swift in Sources */,
+				67B6EBF02A25BFE50004E173 /* ProButtonSection.swift in Sources */,
 				67B6EBBD2A256FE90004E173 /* PanMenuAction.swift in Sources */,
 				67B6EBBB2A256FBE0004E173 /* ContextMenuAction.swift in Sources */,
 				67B6EBC82A25A2A70004E173 /* ThemeController.swift in Sources */,
