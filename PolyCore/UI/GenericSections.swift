@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension UI {    
-    public class func buttonGroupSection(_ theme: Theme, edges: UIRectEdge = UIRectEdge(), line: Int = #line) -> ButtonGroupSection {
+extension ButtonGroupSection {
+    public static func defaultSection(_ theme: Theme, edges: UIRectEdge = UIRectEdge(), line: Int = #line) -> ButtonGroupSection {
         let section = ButtonGroupSection()
         section.identifier = "\(#function):\(line)"
         section.style.backgroundColor = UI.secondaryBackgroundColor(theme)
@@ -22,8 +22,10 @@ extension UI {
         }
         return section
     }
-    
-    public class func defaultButtonSection() -> ButtonSection {
+}
+
+extension ButtonSection {
+    public class func `default`() -> ButtonSection {
         let section = ButtonSection()
         section.detailComponent.padding = UI.defaultDetailPadding
         section.buttonPadding = UI.defaultContentPadding
@@ -33,10 +35,10 @@ extension UI {
         section.trailingImageComponent.padding = UI.defaultTrailingImagePadding
         return section
     }
-
+    
     // Blue button with white text
-    public class func filledButtonSection(_ theme: Theme, line: Int = #line) -> ButtonSection {
-        let section = UI.defaultButtonSection()
+    public class func filled(_ theme: Theme, line: Int = #line) -> ButtonSection {
+        let section = ButtonSection.default()
         section.identifier = "\(#function):\(line)"
         section.titleComponent.font = UIFont.boldSystemFont(ofSize: 20)
         section.titleComponent.textColor = UI.secondaryBackgroundColor(theme)
@@ -51,8 +53,8 @@ extension UI {
     }
     
     // Blue button with white text
-    public class func multilineFilledButtonSection(_ theme: Theme, line: Int = #line) -> ButtonSection {
-        let section = UI.filledButtonSection(theme, line: line)
+    public class func multilineFilled(_ theme: Theme, line: Int = #line) -> ButtonSection {
+        let section = ButtonSection.filled(theme, line: line)
         section.titleComponent.font = UIFont.boldSystemFont(ofSize: 19)
         section.detailComponent.padding.top = 0
         section.detailComponent.font = UIFont.systemFont(ofSize: 13, weight: .medium)
@@ -65,8 +67,8 @@ extension UI {
     }
     
     // Blue button with white text
-    public class func bottomButtonSection(_ theme: Theme, line: Int = #line) -> ButtonSection {
-        let section = UI.filledButtonSection(theme, line: line)
+    public class func bottom(_ theme: Theme, line: Int = #line) -> ButtonSection {
+        let section = ButtonSection.filled(theme, line: line)
         section.behavior = LYFixedBottomBehavior()
         section.style.backgroundColor = UI.backgroundColor(theme).withAlphaComponent(0.8)
         section.style.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -75,8 +77,8 @@ extension UI {
     }
     
     // Blue button with white text
-    public class func multilineBottomButtonSection(_ theme: Theme, line: Int = #line) -> ButtonSection {
-        let section = UI.multilineFilledButtonSection(theme, line: line)
+    public class func multilineBottom(_ theme: Theme, line: Int = #line) -> ButtonSection {
+        let section = ButtonSection.multilineFilled(theme, line: line)
         section.behavior = LYFixedBottomBehavior()
         section.style.backgroundColor = UI.backgroundColor(theme).withAlphaComponent(0.8)
         section.style.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -84,7 +86,7 @@ extension UI {
         return section
     }
     
-    public class func proButtonSection(_ theme: Theme, line: Int = #line) -> ButtonSection {
+    public class func pro(_ theme: Theme, line: Int = #line) -> ButtonSection {
         let section = ButtonSection()
         section.buttonStyle.contents = UI.proIcon(theme).cgImage
         section.buttonStyle.contentsGravity = .resizeAspectFill
@@ -94,7 +96,7 @@ extension UI {
         return section
     }
     
-    public class func bottomFooterSection(_ theme: Theme, small: Bool = false, line: Int = #line) -> SpacerSection {
+    public class func bottomFooter(_ theme: Theme, small: Bool = false, line: Int = #line) -> SpacerSection {
         let behavior = LYFixedBottomBehavior()
         behavior.includeBottomOffsetInHeight = true
         let section = SpacerSection(height: small ? 10 : 20)
@@ -104,8 +106,8 @@ extension UI {
         return section
     }
     
-    public class func systemButtonSection(_ theme: Theme, line: Int = #line) -> ButtonSection {
-        let section = UI.defaultButtonSection()
+    public class func system(_ theme: Theme, line: Int = #line) -> ButtonSection {
+        let section = ButtonSection.default()
         section.identifier = "\(#function):\(line)"
         section.titleComponent.font = UIFont.boldSystemFont(ofSize: 16)
         section.titleComponent.textColor = UI.tintColor(theme)
@@ -117,80 +119,20 @@ extension UI {
         return section
     }
     
-    public class func systemBottomButtonSection(_ theme: Theme, line: Int = #line) -> ButtonSection {
-        let section = UI.systemButtonSection(theme)
+    public class func systemBottom(_ theme: Theme, line: Int = #line) -> ButtonSection {
+        let section = ButtonSection.system(theme)
         section.behavior = LYFixedBottomBehavior()
         section.style.backgroundColor = UI.backgroundColor(theme).withAlphaComponent(0.8)
         section.style.maskedCorners = []
         return section
     }
     
-    // Grey button with blue text
-    public class func buttonSection(_ theme: Theme, destructive: Bool = false, line: Int = #line) -> ButtonSection {
-        let section = UI.defaultButtonSection()
-        section.identifier = "\(#function):\(line)"
-        section.titleComponent.textAlignment = .center
-        section.titleComponent.font = UIFont.boldSystemFont(ofSize: 18)
-        section.titleComponent.numberOfLines = 0
-        if destructive {
-            section.titleComponent.textColor = UI.destructiveColor(theme)
-        } else {
-            section.titleComponent.textColor = UI.tintColor(theme)
-        }
-        section.disabledTitleComponent = section.titleComponent
-        section.disabledTitleComponent?.textColor = UI.disabledLabelColor(theme)
-        section.buttonStyle.backgroundColor = UI.buttonColor(theme)
-        section.buttonStyle.cornerRadius = 10
-        section.highlightedStyle = section.buttonStyle
-        section.highlightedStyle?.backgroundColor = UI.highlightedButtonColor(theme)
-        return section
-    }
-    
-    // Ellipsis button
-    public class func moreButtonSection(_ theme: Theme, destructive: Bool = false, line: Int = #line) -> ButtonSection {
-        let section = UI.defaultButtonSection()
-        section.identifier = "\(#function):\(line)"
-        section.leadingImageComponent.image = UI.sidewaysEllipsisLeadingIcon
-        section.leadingImageComponent.tintColor = UI.tintColor(theme)
-        section.leadingImageComponent.padding = UIEdgeInsets(top: -2, left: -7, bottom: -2, right: -7)
-        section.disabledLeadingImageComponent = section.leadingImageComponent
-        section.disabledLeadingImageComponent?.tintColor = UI.disabledLabelColor(theme)
-        section.buttonStyle.backgroundColor = UI.buttonColor(theme)
-        section.buttonStyle.cornerRadius = 10
-        section.highlightedStyle = section.buttonStyle
-        section.highlightedStyle?.backgroundColor = UI.highlightedButtonColor(theme)
-        return section
-    }
-    
-    // Cell with blue text
-    public class func secondaryButtonSection(_ theme: Theme, enabled: Bool = true, destructive: Bool = false, line: Int = #line) -> BasicSection {
-        let section = BasicSection.defaultSection()
-        section.identifier = "\(#function):\(line)"
-        section.titleNumberOfLines = 0
-        section.titleTextColor = enabled ? (destructive ? UI.destructiveColor(theme) : UI.tintColor(theme)) : UI.disabledLabelColor(theme)
-        section.leadingImageTintColor = enabled ? (destructive ? UI.destructiveColor(theme) : UI.tintColor(theme)) : UI.disabledLabelColor(theme)
-        if theme.kind == .modal {
-            section.titleFont = UIFont.boldSystemFont(ofSize: 18)
-        } else {
-            section.titleFont = UIFont.boldSystemFont(ofSize: 16)
-        }
-        section.titleTextAlignment = .center
-        section.style.backgroundColor = UI.secondaryBackgroundColor(theme)
-        return section
-    }
-    
-    public class func secondaryButtonSection2(_ theme: Theme, enabled: Bool = true, destructive: Bool = false, line: Int = #line) -> BasicSection {
-        let section = secondaryButtonSection(theme, enabled: enabled, destructive: destructive, line: line)
-        section.titleTextAlignment = .natural
-        return section
-    }
-    
     // Cell with blue underlined text
-    public class func linkButtonSection(_ theme: Theme, text: String, textAlignment: NSTextAlignment, line: Int = #line) -> ButtonSection {
+    public class func link(_ theme: Theme, text: String, textAlignment: NSTextAlignment, line: Int = #line) -> ButtonSection {
         let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = textAlignment
         
-        let section = UI.defaultButtonSection()
+        let section = ButtonSection.default()
         section.identifier = "\(#function):\(line)"
         section.buttonPadding = .zero
         section.titleComponent.attributedText = NSAttributedString(string: text, attributes: [
@@ -213,6 +155,71 @@ extension UI {
             NSAttributedString.Key.foregroundColor: UI.disabledLabelColor(theme),
             NSAttributedString.Key.paragraphStyle: paragraphStyle,
         ])
+        return section
+    }
+    
+    // Grey button with blue text
+    public class func button(_ theme: Theme, destructive: Bool = false, line: Int = #line) -> ButtonSection {
+        let section = ButtonSection.default()
+        section.identifier = "\(#function):\(line)"
+        section.titleComponent.textAlignment = .center
+        section.titleComponent.font = UIFont.boldSystemFont(ofSize: 18)
+        section.titleComponent.numberOfLines = 0
+        if destructive {
+            section.titleComponent.textColor = UI.destructiveColor(theme)
+        } else {
+            section.titleComponent.textColor = UI.tintColor(theme)
+        }
+        section.disabledTitleComponent = section.titleComponent
+        section.disabledTitleComponent?.textColor = UI.disabledLabelColor(theme)
+        section.buttonStyle.backgroundColor = UI.buttonColor(theme)
+        section.buttonStyle.cornerRadius = 10
+        section.highlightedStyle = section.buttonStyle
+        section.highlightedStyle?.backgroundColor = UI.highlightedButtonColor(theme)
+        return section
+    }
+    
+    // Ellipsis button
+    public class func ellipsis(_ theme: Theme, destructive: Bool = false, line: Int = #line) -> ButtonSection {
+        let section = ButtonSection.default()
+        section.identifier = "\(#function):\(line)"
+        section.leadingImageComponent.image = UI.sidewaysEllipsisLeadingIcon
+        section.leadingImageComponent.tintColor = UI.tintColor(theme)
+        section.leadingImageComponent.padding = UIEdgeInsets(top: -2, left: -7, bottom: -2, right: -7)
+        section.disabledLeadingImageComponent = section.leadingImageComponent
+        section.disabledLeadingImageComponent?.tintColor = UI.disabledLabelColor(theme)
+        section.buttonStyle.backgroundColor = UI.buttonColor(theme)
+        section.buttonStyle.cornerRadius = 10
+        section.highlightedStyle = section.buttonStyle
+        section.highlightedStyle?.backgroundColor = UI.highlightedButtonColor(theme)
+        return section
+    }
+}
+
+extension UI {
+
+    
+    
+    // Cell with blue text
+    public class func secondaryButtonSection(_ theme: Theme, enabled: Bool = true, destructive: Bool = false, line: Int = #line) -> BasicSection {
+        let section = BasicSection.defaultSection()
+        section.identifier = "\(#function):\(line)"
+        section.titleNumberOfLines = 0
+        section.titleTextColor = enabled ? (destructive ? UI.destructiveColor(theme) : UI.tintColor(theme)) : UI.disabledLabelColor(theme)
+        section.leadingImageTintColor = enabled ? (destructive ? UI.destructiveColor(theme) : UI.tintColor(theme)) : UI.disabledLabelColor(theme)
+        if theme.kind == .modal {
+            section.titleFont = UIFont.boldSystemFont(ofSize: 18)
+        } else {
+            section.titleFont = UIFont.boldSystemFont(ofSize: 16)
+        }
+        section.titleTextAlignment = .center
+        section.style.backgroundColor = UI.secondaryBackgroundColor(theme)
+        return section
+    }
+    
+    public class func secondaryButtonSection2(_ theme: Theme, enabled: Bool = true, destructive: Bool = false, line: Int = #line) -> BasicSection {
+        let section = secondaryButtonSection(theme, enabled: enabled, destructive: destructive, line: line)
+        section.titleTextAlignment = .natural
         return section
     }
         

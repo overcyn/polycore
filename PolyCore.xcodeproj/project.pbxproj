@@ -71,6 +71,7 @@
 		67B6EC032A286EB70004E173 /* PageState_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBFF2A286E190004E173 /* PageState_Tests.swift */; };
 		67B6EC042A286EB90004E173 /* Cache_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBFA2A286DFF0004E173 /* Cache_Tests.swift */; };
 		67B6EC052A286EBC0004E173 /* Debouncer_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBF72A286DFF0004E173 /* Debouncer_Tests.swift */; };
+		67B6EC092A288DB80004E173 /* BarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EC082A288DB80004E173 /* BarItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		67B6EBFA2A286DFF0004E173 /* Cache_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache_Tests.swift; sourceTree = "<group>"; };
 		67B6EBFF2A286E190004E173 /* PageState_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageState_Tests.swift; sourceTree = "<group>"; };
 		67B6EC002A286E190004E173 /* PageState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageState.swift; sourceTree = "<group>"; };
+		67B6EC082A288DB80004E173 /* BarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 		67B6EBBE2A259FF90004E173 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				67B6EC082A288DB80004E173 /* BarItem.swift */,
 				67B6EBF52A286D350004E173 /* GenericSections.swift */,
 				67B6EBC92A25A3550004E173 /* UI.swift */,
 				67B6EBCE2A25A3FF0004E173 /* Colors.swift */,
@@ -487,6 +490,7 @@
 				67B6EBC02A25A01F0004E173 /* SeparatorSection.swift in Sources */,
 				67B6EC022A286E190004E173 /* PageState.swift in Sources */,
 				67B6EBF62A286D350004E173 /* GenericSections.swift in Sources */,
+				67B6EC092A288DB80004E173 /* BarItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

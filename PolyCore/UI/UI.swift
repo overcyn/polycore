@@ -46,6 +46,48 @@ extension BasicSection {
     }
 }
 
+extension UI {
+    public static func configure(_ theme: Theme, navigationBar: UINavigationBar) {
+        if theme.kind == .modal {
+            return
+        }
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = UI.secondaryBackgroundColor(theme)
+        navBarAppearance.shadowColor = UI.barBorderColor(theme)
+        
+        navigationBar.standardAppearance = navBarAppearance
+        navigationBar.compactAppearance = navBarAppearance
+        navigationBar.scrollEdgeAppearance = navBarAppearance
+    }
+    
+    public static func configure(_ theme: Theme, quickOpenNavigationBar navigationBar: UINavigationBar) {
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = UI.backgroundColor(theme)
+        navBarAppearance.shadowColor = UI.barBorderColor(theme)
+        
+        navigationBar.standardAppearance = navBarAppearance
+        navigationBar.compactAppearance = navBarAppearance
+        navigationBar.scrollEdgeAppearance = navBarAppearance
+    }
+    
+    public static func configure(_ theme: Theme, tabBar: UITabBar) {
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBarAppearance.backgroundColor = UI.secondaryBackgroundColor(theme)
+        tabBarAppearance.shadowImage = UIImage()
+        tabBarAppearance.backgroundImage = UIImage()
+        tabBarAppearance.shadowColor = UI.barBorderColor(theme)
+        
+        tabBar.standardAppearance = tabBarAppearance
+        if #available(iOS 15.0, *) {
+            tabBar.scrollEdgeAppearance = tabBarAppearance
+        }
+    }
+}
+
+
 public class UI {
     public static var defaultSelectionColor = UIColor.systemBlue.withAlphaComponent(0.7)
     public static var defaultContentPadding = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
