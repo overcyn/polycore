@@ -72,6 +72,9 @@
 		67B6EC042A286EB90004E173 /* Cache_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBFA2A286DFF0004E173 /* Cache_Tests.swift */; };
 		67B6EC052A286EBC0004E173 /* Debouncer_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EBF72A286DFF0004E173 /* Debouncer_Tests.swift */; };
 		67B6EC092A288DB80004E173 /* BarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EC082A288DB80004E173 /* BarItem.swift */; };
+		67B6EC0B2A36D4B10004E173 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EC0A2A36D4B10004E173 /* ContentView.swift */; };
+		67B6EC0D2A36D7160004E173 /* LoadingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EC0C2A36D7160004E173 /* LoadingPage.swift */; };
+		67B6EC0F2A36D76B0004E173 /* KeyboardShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EC0E2A36D76B0004E173 /* KeyboardShortcut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +154,9 @@
 		67B6EBFF2A286E190004E173 /* PageState_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageState_Tests.swift; sourceTree = "<group>"; };
 		67B6EC002A286E190004E173 /* PageState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageState.swift; sourceTree = "<group>"; };
 		67B6EC082A288DB80004E173 /* BarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarItem.swift; sourceTree = "<group>"; };
+		67B6EC0A2A36D4B10004E173 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		67B6EC0C2A36D7160004E173 /* LoadingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingPage.swift; sourceTree = "<group>"; };
+		67B6EC0E2A36D76B0004E173 /* KeyboardShortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardShortcut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +257,7 @@
 		67B6EBA42A25512D0004E173 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				67B6EC0A2A36D4B10004E173 /* ContentView.swift */,
 				67B6EBFF2A286E190004E173 /* PageState_Tests.swift */,
 				67B6EC002A286E190004E173 /* PageState.swift */,
 				67B6EBFA2A286DFF0004E173 /* Cache_Tests.swift */,
@@ -313,6 +320,8 @@
 		67B6EBBE2A259FF90004E173 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				67B6EC0E2A36D76B0004E173 /* KeyboardShortcut.swift */,
+				67B6EC0C2A36D7160004E173 /* LoadingPage.swift */,
 				67B6EC082A288DB80004E173 /* BarItem.swift */,
 				67B6EBF52A286D350004E173 /* GenericSections.swift */,
 				67B6EBC92A25A3550004E173 /* UI.swift */,
@@ -446,6 +455,8 @@
 			files = (
 				67B6EBFD2A286DFF0004E173 /* Cache.swift in Sources */,
 				67B6EBDC2A25BE150004E173 /* LoadingSection.swift in Sources */,
+				67B6EC0F2A36D76B0004E173 /* KeyboardShortcut.swift in Sources */,
+				67B6EC0B2A36D4B10004E173 /* ContentView.swift in Sources */,
 				67B6EBE82A25BEFE0004E173 /* SwitchSection.swift in Sources */,
 				67B6EBD62A25A5590004E173 /* UIColorExtensions.swift in Sources */,
 				67B6EBD82A25A5BA0004E173 /* SpacerSection.swift in Sources */,
@@ -458,6 +469,7 @@
 				67B6EBED2A25BF620004E173 /* AppearanceSection.swift in Sources */,
 				67B6EBB92A256F210004E173 /* ButtonSection.swift in Sources */,
 				67B6EBEA2A25BEFE0004E173 /* SliderSection.swift in Sources */,
+				67B6EC0D2A36D7160004E173 /* LoadingPage.swift in Sources */,
 				67B6EBEE2A25BF620004E173 /* TitleSection.swift in Sources */,
 				67B6EBD42A25A4EF0004E173 /* UIImageExtensions.swift in Sources */,
 				67B6EB942A2549B60004E173 /* LYCollectionViewLayout.m in Sources */,
