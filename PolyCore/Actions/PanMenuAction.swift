@@ -70,7 +70,7 @@ class PanMenuPage: NSObject, LYPage {
     public var renderImmediately = true
     
     public func render(_ input: LYPageInput) -> LYPageOutput {
-        let theme = ThemeController.shared.theme(input: input)
+        let theme = Theme(kind: .standard)
         let output = LYPageOutput()
         var array: [LYSection] = []
         for i in panMenu.items {
@@ -108,7 +108,7 @@ class PanMenuPage: NSObject, LYPage {
         array = UI.trimSeparators(array)
         output.sections = array
         output.shouldAutorotate = false
-        UI.configure(theme, output: output)
+        UI.configure(theme, input: input, output: output)
 
         // Trigger the pan menu to relayout based on the content size.
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(50), execute: {

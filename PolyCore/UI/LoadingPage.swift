@@ -27,7 +27,7 @@ public class LoadingPage: NSObject, LYPage {
     public var showProgress = true
     
     public func render(_ input: LYPageInput) -> LYPageOutput {
-        let theme = ThemeController.shared.theme(kind: .modal, input: input)
+        let theme = Theme(kind: .modal)
         let output = LYPageOutput()
         
         var array: [LYSection] = []
@@ -62,7 +62,7 @@ public class LoadingPage: NSObject, LYPage {
             array.append(section)
         }
         output.sections = array
-        UI.configure(theme, output: output)
+        UI.configure(theme, input: input, output: output)
         return output
     }
 }

@@ -11,17 +11,19 @@ import Foundation
 public struct Theme {
     public let kind: ThemeKind
     public var userInterfaceStyle: UIUserInterfaceStyle
-    public var safeAreaInsets: UIEdgeInsets
     
-    public init(kind: ThemeKind, userInterfaceStyle: UIUserInterfaceStyle, safeAreaInsets: UIEdgeInsets) {
+    public init(kind: ThemeKind, userInterfaceStyle: UIUserInterfaceStyle) {
         self.kind = kind
         self.userInterfaceStyle = userInterfaceStyle
-        self.safeAreaInsets = safeAreaInsets
+    }
+    
+    public init(kind: ThemeKind) {
+        self.kind = kind
+        self.userInterfaceStyle = UIApplication.shared.keyWindow?.rootViewController?.traitCollection.userInterfaceStyle ?? .unspecified
     }
 }
 
 public enum ThemeKind {
-    case standard // UISplitViewController primary / UITabBarController
-    case detail // UISplitViewController secondary
-    case modal // Modal
+    case standard
+    case modal
 }

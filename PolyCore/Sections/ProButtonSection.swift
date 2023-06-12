@@ -231,7 +231,7 @@ class ProButton: UIButton, ThemeControllerObserver {
     // MARK: Internal
     
     func update() {
-        let theme = ThemeController.shared.theme(kind: .modal)
+        let theme = Theme(kind: .modal)
         if isSelected {
             let bottomImage = UIImage.image(systemName: "circle.fill", configuration: UIImage.SymbolConfiguration(pointSize: 23, weight: .medium), size: CGSize(width:30, height: 50))!.withTintColor(.white).withRenderingMode(.alwaysOriginal)
             let topImage = UIImage.image(systemName: "checkmark", configuration: UIImage.SymbolConfiguration(pointSize: 26, weight: .semibold), size: CGSize(width: 30, height: 50))!.withTintColor(.systemGreen).withRenderingMode(.alwaysOriginal)
@@ -245,7 +245,7 @@ class ProButton: UIButton, ThemeControllerObserver {
             proImageView.tintColor = .white
             backgroundColor = UI.secondaryBackgroundColor(theme)
         } else if isHighlighted {
-            let theme = ThemeController.shared.theme(kind: .modal)
+            let theme = Theme(kind: .modal)
             let image = UIImage.image(systemName: "circle", configuration: UIImage.SymbolConfiguration(pointSize: 23, weight: .medium), size: CGSize(width:30, height: 50))!.withTintColor(UI.chevronColor(theme)).withRenderingMode(.alwaysOriginal)
             
             proBackgroundImageView.image = nil
@@ -255,7 +255,7 @@ class ProButton: UIButton, ThemeControllerObserver {
             proImageView.image = image
             backgroundColor = UI.highlightedButtonColor(theme)
         } else {
-            let theme = ThemeController.shared.theme(kind: .modal)
+            let theme = Theme(kind: .modal)
             let image = UIImage.image(systemName: "circle", configuration: UIImage.SymbolConfiguration(pointSize: 23, weight: .medium), size: CGSize(width:30, height: 50))!.withTintColor(UI.chevronColor(theme)).withRenderingMode(.alwaysOriginal)
             
             proBackgroundImageView.image = nil

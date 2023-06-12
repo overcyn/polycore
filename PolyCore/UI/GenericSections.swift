@@ -313,7 +313,7 @@ extension UI {
     public class func headerSections(_ theme: Theme, line: Int = #line) -> [LYSection] {
         let section = SpacerSection(height: 0)
         section.identifier = "\(#function):\(line)"
-        if theme.kind == .standard || theme.kind == .detail {
+        if theme.kind == .standard {
             if UIDevice.current.userInterfaceIdiom == .phone {
                 section.height = 10
             } else {
@@ -329,7 +329,7 @@ extension UI {
     public class func footerSections(_ theme: Theme, line: Int = #line) -> [LYSection] {
         let section = SpacerSection(height: 0)
         section.identifier = "\(#function):\(line)"
-        if theme.kind == .standard || theme.kind == .detail {
+        if theme.kind == .standard {
             if UIDevice.current.userInterfaceIdiom == .phone {
                 section.height = 10
             } else {
@@ -344,7 +344,7 @@ extension UI {
     public class func spacerSection(_ theme: Theme, line: Int = #line) -> [LYSection] {
         let section = SpacerSection(height: 0)
         section.identifier = "\(#function):\(line)"
-        if theme.kind == .standard || theme.kind == .detail {
+        if theme.kind == .standard {
             section.height = 10
         } else if theme.kind == .modal {
             section.height = 25
@@ -538,12 +538,6 @@ extension UI {
             picker.value = (remoteNames.firstIndex(where: { i in
                 i == remoteName
             }) ?? -1) + 1
-        }
-    }
-    
-    public class func configure(_ theme: Theme, segmentedControl section: SegmentedControlSection) {
-        if (theme.kind == .detail && UIDevice.current.userInterfaceIdiom == .phone) || theme.kind == .standard {
-            section.contentPadding = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
         }
     }
 }

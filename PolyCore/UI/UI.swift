@@ -109,23 +109,34 @@ public class UI {
         return trimmed
     }
     
-    public class func configure(_ theme: Theme, output: LYPageOutput) {
+    public class func configure(_ theme: Theme, input: LYPageInput, output: LYPageOutput) {
         output.backgroundColor = UI.backgroundColor(theme)
-        output.sections = UI.configure(theme, sections: output.sections)
+        output.sections = UI.configure(theme, input: input, sections: output.sections)
     }
     
-    public class func configure(_ theme: Theme, sections: [LYSection]) -> [LYSection] {
-        if (theme.kind == .detail && UIDevice.current.userInterfaceIdiom == .phone) || theme.kind == .standard {
-            // Configure the left and right safe area insets
-            for i in sections {
-                if let configurable = i as? ConfigurableSection, !configurable.style.configuredContentPadding {
-                    configurable.contentPadding.left += theme.safeAreaInsets.left
-                    configurable.contentPadding.right += theme.safeAreaInsets.right
-                    configurable.style.configuredContentPadding = true // Don't apply content insets multiple times
+    public class func configure(_ theme: Theme, input: LYPageInput, sections: [LYSection]) -> [LYSection] {
+        var shouldAddRoundedInsets: Bool
+        if theme.kind == .modal {
+            shouldAddRoundedInsets = true
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            if let splitVC = input.viewController.splitViewController {
+                if splitVC.isMaster(input.viewController) {
+                    shouldAddRoundedInsets = false // Don't round splitview master
+                } else {
+                    shouldAddRoundedInsets = true // Round the splitview detail
+                }
+            } else {
+                if input.viewController.view.window == nil {
+                    shouldAddRoundedInsets = true // Handle collapsed detail view, which should be rounded
+                } else {
+                    shouldAddRoundedInsets = false
                 }
             }
-            return sections
         } else {
+            shouldAddRoundedInsets = false // dont round on iphone
+        }
+        
+        if shouldAddRoundedInsets {
             // For each section
             for i in 0..<sections.count {
                 let section = sections[i]
@@ -166,7 +177,7 @@ public class UI {
                         
                         if theme.kind == .modal {
                             configurable.behavior = behavior
-                        } else if theme.kind == .detail {
+                        } else {
                             behavior.maxWidth = 800
                             configurable.behavior = behavior
                         }
@@ -175,11 +186,22 @@ public class UI {
                         
                         if theme.kind == .modal {
                             configurable.behavior = behavior
-                        } else if theme.kind == .detail {
+                        } else {
                             behavior.maxWidth = 800
                             configurable.behavior = behavior
                         }
                     }
+                }
+            }
+            return sections
+        } else {
+            // Configure the left and right safe area insets
+            for i in sections {
+                if let configurable = i as? ConfigurableSection, !configurable.style.configuredContentPadding {
+                    let safeAreaInsets = input.viewController.view.safeAreaInsets
+                    configurable.contentPadding.left += safeAreaInsets.left
+                    configurable.contentPadding.right += safeAreaInsets.right
+                    configurable.style.configuredContentPadding = true // Don't apply content insets multiple times
                 }
             }
             return sections
