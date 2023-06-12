@@ -23,9 +23,9 @@ public class ThemeController {
     public static var shared: ThemeController = ThemeController()
     public var observers: [WeakThemeControllerObserver] = []
     
-    public func theme(kind: ThemeKind? = nil) -> Theme {
+    public func theme(kind: ThemeKind) -> Theme {
         let traitCollection = UIApplication.shared.keyWindow?.rootViewController?.traitCollection
-        return Theme(kind: kind ?? .master, userInterfaceStyle: traitCollection?.userInterfaceStyle ?? .unspecified, safeAreaInsets: .zero)
+        return Theme(kind: kind, userInterfaceStyle: traitCollection?.userInterfaceStyle ?? .unspecified, safeAreaInsets: .zero)
     }
     
     public func theme(kind k: ThemeKind? = nil, input: LYPageInput) -> Theme {
@@ -35,7 +35,7 @@ public class ThemeController {
             kind = k
         } else if let splitVC = vc.splitViewController {
             if splitVC.isMaster(vc) {
-                kind = .master
+                kind = .standard
             } else {
                 kind = .detail
             }
@@ -43,7 +43,7 @@ public class ThemeController {
             if vc.view.window == nil {
                 kind = .detail // Handle collapsed detail view
             } else {
-                kind = .master
+                kind = .standard
             }
         }
         

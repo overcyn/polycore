@@ -209,7 +209,7 @@ public class ContentView: UIView, ThemeControllerObserver {
     // MARK: Internal
     
     func updateTheme() {
-        let theme = ThemeController.shared.theme()
+        let theme = ThemeController.shared.theme(kind: .standard)
         self.backgroundColor = UI.backgroundColor(theme)
     }
 }

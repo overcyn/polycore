@@ -115,7 +115,8 @@ public class UI {
     }
     
     public class func configure(_ theme: Theme, sections: [LYSection]) -> [LYSection] {
-        if (theme.kind == .detail && UIDevice.current.userInterfaceIdiom == .phone) || theme.kind == .master {
+        if (theme.kind == .detail && UIDevice.current.userInterfaceIdiom == .phone) || theme.kind == .standard {
+            // Configure the left and right safe area insets
             for i in sections {
                 if let configurable = i as? ConfigurableSection, !configurable.style.configuredContentPadding {
                     configurable.contentPadding.left += theme.safeAreaInsets.left
@@ -124,65 +125,64 @@ public class UI {
                 }
             }
             return sections
-        }
-        
-        // For each section
-        for i in 0..<sections.count {
-            let section = sections[i]
-            // If section is configurable, is not a spacer and has not been configured
-            if let section = section as? ConfigurableSection, !(section is SpacerSection), (section.style.cornerRadius == 0 && section.style.maskedCorners == [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]) || section.style.configuredCornerRadius {
-                section.style.configuredCornerRadius = true
-                
-                // Set the corner radius
-                section.style.cornerRadius = 10
-                
-                // And the masked corners
-                let prevSection = sections[safe: i-1]
-                let nextSection = sections[safe: i+1]
-                section.style.maskedCorners = []
-                if (prevSection is SpacerSection) || prevSection == nil {
-                    section.style.maskedCorners.insert(.layerMinXMinYCorner)
-                    section.style.maskedCorners.insert(.layerMaxXMinYCorner)
-                }
-                if (nextSection is SpacerSection) || nextSection == nil {
-                    section.style.maskedCorners.insert(.layerMinXMaxYCorner)
-                    section.style.maskedCorners.insert(.layerMaxXMaxYCorner)
-                }
-            }
-        }
-        
-        // Set insets
-        let insets: UIEdgeInsets
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            insets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         } else {
-            insets = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
-        }
-        
-        for i in sections {
-            if let configurable = i as? ConfigurableSection {
-                if configurable.behavior == nil {
-                    let behavior = LYInsetBehavior()
-                    behavior.insets = insets
+            // For each section
+            for i in 0..<sections.count {
+                let section = sections[i]
+                // If section is configurable, is not a spacer and has not been configured
+                if let section = section as? ConfigurableSection, !(section is SpacerSection), (section.style.cornerRadius == 0 && section.style.maskedCorners == [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]) || section.style.configuredCornerRadius {
+                    section.style.configuredCornerRadius = true
                     
-                    if theme.kind == .modal {
-                        configurable.behavior = behavior
-                    } else if theme.kind == .detail {
-                        behavior.maxWidth = 800
-                        configurable.behavior = behavior
+                    // Set the corner radius
+                    section.style.cornerRadius = 10
+                    
+                    // And the masked corners
+                    let prevSection = sections[safe: i-1]
+                    let nextSection = sections[safe: i+1]
+                    section.style.maskedCorners = []
+                    if (prevSection is SpacerSection) || prevSection == nil {
+                        section.style.maskedCorners.insert(.layerMinXMinYCorner)
+                        section.style.maskedCorners.insert(.layerMaxXMinYCorner)
                     }
-                } else if let behavior = configurable.behavior as? LYFixedBottomBehavior {
-                    behavior.insets = insets
-                    
-                    if theme.kind == .modal {
-                        configurable.behavior = behavior
-                    } else if theme.kind == .detail {
-                        behavior.maxWidth = 800
-                        configurable.behavior = behavior
+                    if (nextSection is SpacerSection) || nextSection == nil {
+                        section.style.maskedCorners.insert(.layerMinXMaxYCorner)
+                        section.style.maskedCorners.insert(.layerMaxXMaxYCorner)
                     }
                 }
             }
+            
+            // Set insets
+            let insets: UIEdgeInsets
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                insets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+            } else {
+                insets = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+            }
+            for i in sections {
+                if let configurable = i as? ConfigurableSection {
+                    if configurable.behavior == nil {
+                        let behavior = LYInsetBehavior()
+                        behavior.insets = insets
+                        
+                        if theme.kind == .modal {
+                            configurable.behavior = behavior
+                        } else if theme.kind == .detail {
+                            behavior.maxWidth = 800
+                            configurable.behavior = behavior
+                        }
+                    } else if let behavior = configurable.behavior as? LYFixedBottomBehavior {
+                        behavior.insets = insets
+                        
+                        if theme.kind == .modal {
+                            configurable.behavior = behavior
+                        } else if theme.kind == .detail {
+                            behavior.maxWidth = 800
+                            configurable.behavior = behavior
+                        }
+                    }
+                }
+            }
+            return sections
         }
-        return sections
     }
 }

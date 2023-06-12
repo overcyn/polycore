@@ -21,7 +21,7 @@ public struct Theme {
 }
 
 public enum ThemeKind {
-    case master // UISplitViewController primary / UITabBarController
+    case standard // UISplitViewController primary / UITabBarController
     case detail // UISplitViewController secondary
     case modal // Modal
 }
