@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67B6EB5C2A25408A0004E173 /* PolyCore.docc in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB5B2A25408A0004E173 /* PolyCore.docc */; };
 		67B6EB622A25408A0004E173 /* PolyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B6EB572A25408A0004E173 /* PolyCore.framework */; };
 		67B6EB672A25408A0004E173 /* PolyCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EB662A25408A0004E173 /* PolyCoreTests.swift */; };
 		67B6EB682A25408A0004E173 /* PolyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B6EB5A2A25408A0004E173 /* PolyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -90,7 +89,6 @@
 /* Begin PBXFileReference section */
 		67B6EB572A25408A0004E173 /* PolyCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PolyCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B6EB5A2A25408A0004E173 /* PolyCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PolyCore.h; sourceTree = "<group>"; };
-		67B6EB5B2A25408A0004E173 /* PolyCore.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PolyCore.docc; sourceTree = "<group>"; };
 		67B6EB612A25408A0004E173 /* PolyCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolyCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B6EB662A25408A0004E173 /* PolyCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyCoreTests.swift; sourceTree = "<group>"; };
 		67B6EB7B2A2549B60004E173 /* LYCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -209,7 +207,6 @@
 				67B6EBB12A256E390004E173 /* Sections */,
 				67B6EBA42A25512D0004E173 /* Utilities */,
 				67B6EB5A2A25408A0004E173 /* PolyCore.h */,
-				67B6EB5B2A25408A0004E173 /* PolyCore.docc */,
 			);
 			path = PolyCore;
 			sourceTree = "<group>";
@@ -464,7 +461,6 @@
 				67B6EBB32A256E770004E173 /* SectionStyle.swift in Sources */,
 				67B6EBF42A2725780004E173 /* Alert.swift in Sources */,
 				67B6EBA92A2565140004E173 /* Action.swift in Sources */,
-				67B6EB5C2A25408A0004E173 /* PolyCore.docc in Sources */,
 				67B6EBDA2A25A7F60004E173 /* BundleExtensions.swift in Sources */,
 				67B6EBED2A25BF620004E173 /* AppearanceSection.swift in Sources */,
 				67B6EBB92A256F210004E173 /* ButtonSection.swift in Sources */,
