@@ -10,7 +10,7 @@ import Foundation
 
 public class LoadingPage: NSObject, LYPage {
     let loadingSection = LoadingSection()
-    let titleSection = BasicSection.defaultSection()
+    let titleSection = BasicSection.default()
     
     public init(showProgress: Bool = true) {
         self.showProgress = showProgress

@@ -129,7 +129,7 @@ extension LYPageViewController: PanModalPresentable {
 
 extension BasicSection {
     class func panMenuSection(_ theme: Theme, enabled: Bool, line: Int = #line) -> BasicSection {
-        let section = BasicSection.defaultSection()
+        let section = BasicSection.default()
         section.identifier = "\(#function):\(line)"
         section.titleFont = UIFont.systemFont(ofSize: 16, weight: .semibold)
         section.detailFont = UIFont.systemFont(ofSize: 14, weight: .regular)

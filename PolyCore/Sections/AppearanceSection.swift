@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import PolyCore
 
 public class AppearanceSection: NSObject, LYSection {
     public var onAppear: (() -> ())?

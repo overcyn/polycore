@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import PolyCore
 
 public class TitleSection: NSObject, LYSection, ConfigurableSection {
     public var identifier: String?

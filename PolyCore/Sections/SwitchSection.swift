@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import PolyCore
 
 public class SwitchSection: NSObject, LYSection, ConfigurableSection {
     public var identifier: String?

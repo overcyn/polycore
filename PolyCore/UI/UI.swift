@@ -9,43 +9,6 @@
 import Foundation
 import SwiftDate
 
-extension BasicSection {
-    public class func defaultSection() -> BasicSection {
-        let section = BasicSection()
-        section.contentPadding = UI.defaultContentPadding
-        section.subtitlePadding = UI.defaultSubtitlePadding
-        section.detailPadding = UI.defaultDetailPadding
-        section.leadingImagePadding = UI.defaultLeadingIconPadding
-        section.leadingImageSize = UI.defaultLeadingIconSize
-        section.trailingImagePadding = UI.defaultTrailingImagePadding
-        return section
-    }
-    
-    public func addFileIcon(_ theme: Theme, isDir: Bool = false) {
-        if isDir {
-            leadingImage = UI.folderLeadingIcon
-            leadingImageTintColor = .systemBlue
-        } else {
-            leadingImage = UI.fileLeadingIcon
-            leadingImageTintColor = UI.disabledLabelColor(theme)
-        }
-    }
-    
-    public func addDisclosureIndicator(_ theme: Theme, _ open: Bool) {
-        leadingImage = open ? UI.disclosureOpenLeadingIcon : UI.disclosureClosedLeadingIcon
-        leadingImageTintColor = UI.chevronColor(theme)
-        leadingImageSize = nil
-        contentPadding.left -= 5
-        leadingImagePadding.right -= 5
-    }
-    
-    public func addChevron(_ theme: Theme) {
-        trailingImage = UIImage(systemName: "chevron.right")?.withConfiguration(UIImage.SymbolConfiguration(pointSize: 18, weight: .medium))
-        trailingImageTintColor = UI.chevronColor(theme)
-        trailingImageSize = CGSize(width: 20, height: 20)
-    }
-}
-
 extension UI {
     public static func configure(_ theme: Theme, navigationBar: UINavigationBar) {
         if theme.kind == .modal {
@@ -84,6 +47,70 @@ extension UI {
         if #available(iOS 15.0, *) {
             tabBar.scrollEdgeAppearance = tabBarAppearance
         }
+    }
+}
+
+extension UI {
+    public class func headerSections(_ theme: Theme, line: Int = #line) -> [LYSection] {
+        let section = SpacerSection(height: 0)
+        section.identifier = "\(#function):\(line)"
+        if theme.kind == .standard {
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                section.height = 10
+            } else {
+                section.height = 20
+            }
+        } else if theme.kind == .modal {
+            section.height = 25
+        }
+        section.style.backgroundColor = UI.backgroundColor(theme)
+        return [section]
+    }
+    
+    public class func footerSections(_ theme: Theme, line: Int = #line) -> [LYSection] {
+        let section = SpacerSection(height: 0)
+        section.identifier = "\(#function):\(line)"
+        if theme.kind == .standard {
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                section.height = 10
+            } else {
+                section.height = 30
+            }
+        } else if theme.kind == .modal {
+            section.height = 25
+        }
+        return [section]
+    }
+    
+    public class func titleSection(_ theme: Theme, title: String, loading: Bool = false, background: Bool = true, line: Int = #line) -> [LYSection] {
+        let section = TitleSection()
+        section.identifier = "\(#function):\(line)"
+        section.contentPadding = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
+        section.titleText = title.uppercased()
+        section.titleTextColor = UI.secondaryLabelColor(theme)
+        if background {
+            section.style.backgroundColor = UI.secondaryBackgroundColor(theme)
+        }
+        section.loading = loading
+        var array: [LYSection] = [section]
+        array.append(SeparatorSection.default(theme))
+        return array
+    }
+            
+    public class func loadingSection(_ theme: Theme, line: Int = #line) -> [LYSection] {
+        let section = LoadingSection()
+        section.identifier = "\(#function):\(line)"
+        return [section]
+    }
+}
+
+extension UI {
+    public class func loadingPage(_ theme: Theme) -> [LYSection] {
+        var array: [LYSection] = []
+        array.append(contentsOf: UI.headerSections(theme))
+        array.append(contentsOf: UI.loadingSection(theme))
+        array.append(contentsOf: UI.footerSections(theme))
+        return array
     }
 }
 

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import PolyCore
 
 public class StepperSection: NSObject, LYSection, ConfigurableSection {
     public var identifier: String?
