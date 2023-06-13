@@ -10,47 +10,6 @@ import Foundation
 import SwiftDate
 
 extension UI {
-    public static func configure(_ theme: Theme, navigationBar: UINavigationBar) {
-        if theme.kind == .modal {
-            return
-        }
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.configureWithOpaqueBackground()
-        navBarAppearance.backgroundColor = UI.secondaryBackgroundColor(theme)
-        navBarAppearance.shadowColor = UI.barBorderColor(theme)
-        
-        navigationBar.standardAppearance = navBarAppearance
-        navigationBar.compactAppearance = navBarAppearance
-        navigationBar.scrollEdgeAppearance = navBarAppearance
-    }
-    
-    public static func configure(_ theme: Theme, quickOpenNavigationBar navigationBar: UINavigationBar) {
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.configureWithOpaqueBackground()
-        navBarAppearance.backgroundColor = UI.backgroundColor(theme)
-        navBarAppearance.shadowColor = UI.barBorderColor(theme)
-        
-        navigationBar.standardAppearance = navBarAppearance
-        navigationBar.compactAppearance = navBarAppearance
-        navigationBar.scrollEdgeAppearance = navBarAppearance
-    }
-    
-    public static func configure(_ theme: Theme, tabBar: UITabBar) {
-        let tabBarAppearance = UITabBarAppearance()
-        tabBarAppearance.configureWithOpaqueBackground()
-        tabBarAppearance.backgroundColor = UI.secondaryBackgroundColor(theme)
-        tabBarAppearance.shadowImage = UIImage()
-        tabBarAppearance.backgroundImage = UIImage()
-        tabBarAppearance.shadowColor = UI.barBorderColor(theme)
-        
-        tabBar.standardAppearance = tabBarAppearance
-        if #available(iOS 15.0, *) {
-            tabBar.scrollEdgeAppearance = tabBarAppearance
-        }
-    }
-}
-
-extension UI {
     public class func headerSections(_ theme: Theme, line: Int = #line) -> [LYSection] {
         let section = SpacerSection(height: 0)
         section.identifier = "\(#function):\(line)"
@@ -113,7 +72,6 @@ extension UI {
         return array
     }
 }
-
 
 public class UI {
     public static var defaultSelectionColor = UIColor.systemBlue.withAlphaComponent(0.7)

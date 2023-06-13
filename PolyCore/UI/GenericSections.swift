@@ -523,3 +523,35 @@ extension PickerSection {
         }
     }
 }
+
+extension UINavigationBar {
+    public func configure(_ theme: Theme) {
+        if theme.kind == .modal {
+            return
+        }
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = UI.secondaryBackgroundColor(theme)
+        navBarAppearance.shadowColor = UI.barBorderColor(theme)
+        
+        standardAppearance = navBarAppearance
+        compactAppearance = navBarAppearance
+        scrollEdgeAppearance = navBarAppearance
+    }
+}
+
+extension UITabBar {
+    public func configure(_ theme: Theme) {
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBarAppearance.backgroundColor = UI.secondaryBackgroundColor(theme)
+        tabBarAppearance.shadowImage = UIImage()
+        tabBarAppearance.backgroundImage = UIImage()
+        tabBarAppearance.shadowColor = UI.barBorderColor(theme)
+        
+        standardAppearance = tabBarAppearance
+        if #available(iOS 15.0, *) {
+            scrollEdgeAppearance = tabBarAppearance
+        }
+    }
+}
