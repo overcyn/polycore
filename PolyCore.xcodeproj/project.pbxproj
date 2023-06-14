@@ -75,6 +75,7 @@
 		67B6EC0D2A36D7160004E173 /* LoadingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EC0C2A36D7160004E173 /* LoadingPage.swift */; };
 		67B6EC0F2A36D76B0004E173 /* KeyboardShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6EC0E2A36D76B0004E173 /* KeyboardShortcut.swift */; };
 		67B6EC482A395C770004E173 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B6EC472A395C770004E173 /* Alamofire.framework */; };
+		67B6EC4A2A395CB50004E173 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B6EC492A395CB50004E173 /* AlamofireImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,7 @@
 		67B6EC0C2A36D7160004E173 /* LoadingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingPage.swift; sourceTree = "<group>"; };
 		67B6EC0E2A36D76B0004E173 /* KeyboardShortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardShortcut.swift; sourceTree = "<group>"; };
 		67B6EC472A395C770004E173 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B6EC492A395CB50004E173 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B6EC4A2A395CB50004E173 /* AlamofireImage.framework in Frameworks */,
 				67B6EBB02A256DE90004E173 /* SwipeCellKit.framework in Frameworks */,
 				67B6EC482A395C770004E173 /* Alamofire.framework in Frameworks */,
 			);
@@ -287,6 +290,7 @@
 		67B6EBAE2A256DE90004E173 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67B6EC492A395CB50004E173 /* AlamofireImage.framework */,
 				67B6EC472A395C770004E173 /* Alamofire.framework */,
 				67B6EBAF2A256DE90004E173 /* SwipeCellKit.framework */,
 			);
