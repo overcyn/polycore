@@ -41,7 +41,7 @@ extension UI {
         return [section]
     }
     
-    public class func titleSection(_ theme: Theme, title: String, loading: Bool = false, background: Bool = true, line: Int = #line) -> [LYSection] {
+    public class func titleSections(_ theme: Theme, title: String, loading: Bool = false, background: Bool = true, line: Int = #line) -> [LYSection] {
         let section = TitleSection()
         section.identifier = "\(#function):\(line)"
         section.contentPadding = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
@@ -56,18 +56,16 @@ extension UI {
         return array
     }
             
-    public class func loadingSection(_ theme: Theme, line: Int = #line) -> [LYSection] {
+    public class func loadingSections(_ theme: Theme, line: Int = #line) -> [LYSection] {
         let section = LoadingSection()
         section.identifier = "\(#function):\(line)"
         return [section]
     }
-}
 
-extension UI {
     public class func loadingPage(_ theme: Theme) -> [LYSection] {
         var array: [LYSection] = []
         array.append(contentsOf: UI.headerSections(theme))
-        array.append(contentsOf: UI.loadingSection(theme))
+        array.append(contentsOf: UI.loadingSections(theme))
         array.append(contentsOf: UI.footerSections(theme))
         return array
     }
